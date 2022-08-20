@@ -6,14 +6,14 @@ def pegar_cotacoes():
 
     requisicao_dic = requisicao.json()
 
-    cotacao_dolar = requisicao_dic['USDBRL']['bid']
-    cotacao_euro = requisicao_dic['EURBRL']['bid']
-    cotacao_btc = requisicao_dic['BTCBRL']['bid']
+    cotacao_dolar = requisicao_dic["USDBRL"]["bid"]
+    cotacao_euro = requisicao_dic["EURBRL"]["bid"]
+    cotacao_btc = requisicao_dic["BTCBRL"]["bid"]
 
-    texto_resposta['text'] = f'''
+    texto_resposta["text"] = f"""
     Dólar: {cotacao_dolar}
     Euro: {cotacao_euro}
-    BTC: {cotacao_btc}'''
+    BTC: {cotacao_btc}"""
 
 janela = Tk()
 janela.geometry("300x200")
@@ -26,6 +26,5 @@ botao.grid(column=0, row=1, padx=10, pady=10)
 
 texto_resposta = Label(janela, text="")
 texto_resposta.grid(column=0, row=2, padx=10, pady=10)
-
 
 janela.mainloop()
